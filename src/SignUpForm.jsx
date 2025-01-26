@@ -47,17 +47,17 @@ function SignUpForm() {
                 <h2 className="text-2xl font-bold mb-6 text-center">Sign Up</h2>
                 <div className="mb-4">
                     <label htmlFor="first-name" className="block text-gray-700">First Name:</label>
-                    <input type="text" id="first-name" name="first-name" required className="mt-1 p-2 w-full border rounded-md" autofocus onChange={(e) => setFormData({...formData, firstName: e.target.value})} />
+                    <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required className="mt-1 p-2 w-full border rounded-md" autofocus onChange={(e) => setFormData({...formData, firstName: e.target.value})} />
                     {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
                 </div>
                 <div className="mb-4">
                     <label htmlFor="email" className="block text-gray-700">Email:</label>
-                    <input type="email" id="email" name="email" required className="mt-1 p-2 w-full border rounded-md" onChange={(e) => setFormData({...formData, email: e.target.value})} />
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required className="mt-1 p-2 w-full border rounded-md" onChange={(e) => setFormData({...formData, email: e.target.value})} />
                     {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                 </div>
                 <div className="mb-4">
                     <label htmlFor="phone" className="block text-gray-700">Phone:</label>
-                    <input type="tel" id="phone" name="phone" required className="mt-1 p-2 w-full border rounded-md" onChange={(e) => setFormData({...formData, phone: e.target.value})} />
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required className="mt-1 p-2 w-full border rounded-md" onChange={(e) => setFormData({...formData, phone: e.target.value})} />
                     {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                 </div>
                 <div className="mb-4">
@@ -67,10 +67,10 @@ function SignUpForm() {
                 </div>
                 <div className="mb-4">
                     <label htmlFor="password" className="block text-gray-700">Password:</label>
-                    <input type="password" id="password" name="password" required className="mt-1 p-2 w-full border rounded-md" onChange={(e) => setFormData({...formData, password: e.target.value})} />
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required className="mt-1 p-2 w-full border rounded-md" onChange={(e) => setFormData({...formData, password: e.target.value})} />
                     {errors.password && <p className="text-red-500 text-xs mt-1">{errors.password}</p>}
                 </div>
-                <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">Sign Up</button>
+                <button type="submit" className="w-full bg-gray-800 text-white p-2 rounded-md hover:bg-blue-600">Sign Up</button>
             </form>
         </div>
     );
